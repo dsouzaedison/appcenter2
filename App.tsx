@@ -14,7 +14,9 @@ import {
   ScrollView,
   StatusBar,
   useColorScheme,
+  Text,
 } from 'react-native';
+import Config from 'react-native-config';
 
 import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
 import {HelloWorld} from './components/hello-world/hello-world.component';
@@ -33,6 +35,7 @@ const App = () => {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
+        <Text>ENV: {JSON.stringify(Config, 0, 4)}</Text>
         <HelloWorld />
       </ScrollView>
     </SafeAreaView>
