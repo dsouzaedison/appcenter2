@@ -8,6 +8,7 @@
     "start": "react-native start",
     "test": "jest -u",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "postinstall" : "npm run lint",
     "ios-staging": "ENVFILE=.env.staging react-native run-ios",
     "ios-prod": "ENVFILE=.env.production react-native run-ios"
   },

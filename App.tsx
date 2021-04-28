@@ -14,7 +14,6 @@ import {
   ScrollView,
   StatusBar,
   useColorScheme,
-  Text,
 } from 'react-native';
 // import Config from 'react-native-config';
 
