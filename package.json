@@ -6,7 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
+    "test": "jest -u",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "ios-staging": "ENVFILE=.env.staging react-native run-ios",
     "ios-prod": "ENVFILE=.env.production react-native run-ios"
