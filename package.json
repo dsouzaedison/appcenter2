@@ -8,7 +8,7 @@
     "start": "react-native start",
     "test": "jest -u",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "postinstall" : "npm run lint",
+    "postinstall": "npm run lint",
     "ios-staging": "ENVFILE=.env.staging react-native run-ios",
     "ios-prod": "ENVFILE=.env.production react-native run-ios"
   },
@@ -22,6 +22,7 @@
     "@babel/preset-typescript": "^7.13.0",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@types/enzyme": "^3.10.8",
     "@types/jest": "^26.0.20",
     "@types/react-native": "^0.64.0",
     "@types/react-test-renderer": "^16.9.2",
@@ -48,6 +49,8 @@
       "json",
       "node"
     ],
-    "modulePathIgnorePatterns": ["<rootDir>/node_modules/"]
+    "modulePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ]
   }
 }
