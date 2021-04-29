@@ -17,17 +17,17 @@ if [ -n "$ipaPath" ]; then
   cd "$ipaPath" || exit
   ipaPath=$(find . -name "*.ipa" | head -1)
   mv "$ipaPath" "$(newName).ipa"
-  cd "$pwa" || exit
-  ipaPath=$(find . -name "*.ipa" | head -1)
+#  cd "$pwa" || exit
+  ipaPath=$(find . -name "$(newName).ipa" | head -1)
   appcenter distribute release -f "$ipaPath" -g Collaborators --app Hidden-Brains/appCenter-iOS
 fi
 
 #if [ "$APP_CENTER_CURRENT_PLATFORM" == "android" ] && [ -n "$apkPath" ]; then
 if [ -n "$apkPath" ]; then
-  cd "$apkPath" || exit                                                                       # Move to apk file folder
-  apkPath=$(find . -name "*.apk" | head -1)                                                   # Find apk filename
-  mv "$apkPath" "$(newName).apk"                                                              # Rename apk with custom name
-  cd "$pwa" || exit                                                                           # Get back to project root
-  apkPath=$(find . -name "*.apk" | head -1)                                                   # Find the apk path from project root
-  appcenter distribute release -f "$apkPath" -g Collaborators --app dsouzaedison11/appCenter2 # Distribute via appcenter
+  cd "$apkPath" || exit                                                                                # Move to apk file folder
+  apkPath=$(find . -name "*.apk" | head -1)                                                            # Find apk filename
+  mv "$apkPath" "$(newName).apk"                                                                       # Rename apk with custom name
+  #  cd "$pwa" || exit                                                                           # Get back to project root
+  generatedApkPath=$(find . -name "$(newName).apk" | head -1)                                          # Find the apk path from project root
+  appcenter distribute release -f "$generatedApkPath" -g Collaborators --app dsouzaedison11/appCenter2 # Distribute via appcenter
 fi
