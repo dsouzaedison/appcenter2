@@ -16,9 +16,9 @@ appcenter login --token "568cc4593d1f96eac42b595a4df7e4d68af5b29b"
 if [ -n "$ipaPath" ]; then
   cd "$(dirname "${ipaPath}")" || exit
   ipaName=$(find . -name "*.ipa" | head -1)
-  mv "$ipaName" "$(newName).ipa"
+  mv "$ipaName" "${newName}.ipa"
   cd "$pwa" || exit
-  generatedIpaPath=$(find . -name "$(newName).ipa" | head -1)
+  generatedIpaPath=$(find . -name "${newName}.ipa" | head -1)
   appcenter distribute release -f "$generatedIpaPath" -g Collaborators --app dsouzaedison11/appCenter2-ios
 fi
 
@@ -26,8 +26,8 @@ fi
 if [ -n "$apkPath" ]; then
   cd "$(dirname "${apkPath}")" || exit                                                                 # Move to apk file folder
   apkName=$(find . -name "*.apk" | head -1)                                                            # Find apk filename
-  mv "$apkName" "$(newName).apk"                                                                       # Rename apk with custom name
+  mv "$apkName" "${newName}.apk"                                                                       # Rename apk with custom name
   cd "$pwa" || exit                                                                                    # Get back to project root
-  generatedApkPath=$(find . -name "$(newName).apk" | head -1)                                          # Find the apk path from project root
+  generatedApkPath=$(find . -name "${newName}.apk" | head -1)                                          # Find the apk path from project root
   appcenter distribute release -f "$generatedApkPath" -g Collaborators --app dsouzaedison11/appCenter2 # Distribute via appcenter
 fi
