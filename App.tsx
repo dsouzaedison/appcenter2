@@ -22,6 +22,7 @@ import {HelloWorld} from './components/hello-world/hello-world.component';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
+  const password = "Password"
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
