@@ -7,8 +7,8 @@ timestamp=$(date +%Y-%m-%d_%H-%M-%S)
 newName="custom_build_$($timestamp)"
 npm install -g appcenter-cli
 
-appcenter login --token "568cc4593d1f96eac42b595a4df7e4d68af5b29b"
-#appcenter login --token "${APP_CENTER_TOKEN}"
+#appcenter login --token "568cc4593d1f96eac42b595a4df7e4d68af5b29b"
+appcenter login --token "${APP_CENTER_TOKEN}"
 
 # APPCENTER_BRANCH - Verify this before distribution to ensure, only develop and master branch builds are distributed
 
@@ -29,5 +29,10 @@ if [ -n "$apkPath" ]; then
   mv "$apkName" "${newName}.apk"                                                                       # Rename apk with custom name
   cd "$pwa" || exit                                                                                    # Get back to project root
   generatedApkPath=$(find . -name "${newName}.apk" | head -1)                                          # Find the apk path from project root
-  appcenter distribute release -f "$generatedApkPath" -g Collaborators --app dsouzaedison11/appCenter2 # Distribute via appcenter
+  appcenter distribute release -f "$generatedApkPath" -r "Testing release notes for ${newName}" -g Collaborators --app dsouzaedison11/appCenter2 # Distribute via appcenter
 fi
+
+
+#- ES lint and horusec errors should break the build
+#Release notes integration
+#ENV access
