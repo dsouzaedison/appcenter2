@@ -10,3 +10,5 @@ git log -1 --pretty=%B
 exit 1
 
 curl -fsSL https://horusec.io/bin/install.sh | bash && horusec start -p . --disable-docker="true"
+
+#alt dev branch
