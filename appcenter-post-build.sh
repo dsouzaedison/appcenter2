@@ -7,8 +7,8 @@ timestamp=$(date +%Y-%m-%d_%H-%M-%S)
 newName="custom_build_$($timestamp)"
 npm install -g appcenter-cli
 
-#appcenter login --token "568cc4593d1f96eac42b595a4df7e4d68af5b29b"
-appcenter login --token "${APP_CENTER_TOKEN}"
+appcenter login --token "568cc4593d1f96eac42b595a4df7e4d68af5b29b"
+#appcenter login --token "${APP_CENTER_TOKEN}"
 
 # APPCENTER_BRANCH - Verify this before distribution to ensure, only develop and master branch builds are distributed
 
