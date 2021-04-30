@@ -21,7 +21,7 @@ if [ -n "$ipaPath" ]; then
   mv "$ipaName" "${newName}.ipa"
   cd "$pwa" || exit
   generatedIpaPath=$(find . -name "${newName}.ipa" | head -1)
-  appcenter distribute release -f "$generatedIpaPath" -r "${commitMessage}" -g Collaborators --app dsouzaedison11/appCenter2-ios
+  appcenter distribute release -f "$generatedIpaPath" -r "$commitMessage" -g Collaborators --app dsouzaedison11/appCenter2-ios
 fi
 
 #if [ "$APP_CENTER_CURRENT_PLATFORM" == "android" ] && [ -n "$apkPath" ]; then
@@ -31,7 +31,7 @@ if [ -n "$apkPath" ]; then
   mv "$apkName" "${newName}.apk"                                                                                             # Rename apk with custom name
   cd "$pwa" || exit                                                                                                          # Get back to project root
   generatedApkPath=$(find . -name "${newName}.apk" | head -1)                                                                # Find the apk path from project root
-  appcenter distribute release -f "$generatedApkPath" -r "${commitMessage}" -g Collaborators --app dsouzaedison11/appCenter2 # Distribute via appcenter
+  appcenter distribute release -f "$generatedApkPath" -r "$commitMessage" -g Collaborators --app dsouzaedison11/appCenter2 # Distribute via appcenter
 fi
 
 #- ES lint and horusec errors should break the build
