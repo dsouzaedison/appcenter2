@@ -13,9 +13,12 @@
     "ios-prod": "ENVFILE=.env.production react-native run-ios"
   },
   "dependencies": {
+    "mobx": "^6.3.0",
+    "mobx-react-lite": "^3.2.0",
     "react": "17.0.1",
     "react-native": "0.64.0",
-    "react-native-config": "^1.4.2"
+    "react-native-config": "^1.4.2",
+    "react-native-encrypted-storage": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

@@ -15,7 +15,6 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B727CBB7263FF39000C3AEF8 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = B727CBB5263FF38F00C3AEF8 /* Counter.m */; };
 		B727CBB8263FF39000C3AEF8 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B727CBB6263FF39000C3AEF8 /* Counter.swift */; };
-		B7A761212642BE2000E16BA1 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A761202642BE2000E16BA1 /* Test.m */; };
 		B7A761262642BE7200E16BA1 /* TestBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A761252642BE7200E16BA1 /* TestBridge.m */; };
 		FAB5E0AEA9CC18FB3F718F9E /* libPods-appCenter-appCenterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B61ED2258D54230D1AF03A5E /* libPods-appCenter-appCenterTests.a */; };
 /* End PBXBuildFile section */
@@ -47,7 +46,6 @@
 		B61ED2258D54230D1AF03A5E /* libPods-appCenter-appCenterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-appCenter-appCenterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B727CBB5263FF38F00C3AEF8 /* Counter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
 		B727CBB6263FF39000C3AEF8 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
-		B7A761202642BE2000E16BA1 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		B7A761242642BE7200E16BA1 /* TestBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBridge.h; sourceTree = "<group>"; };
 		B7A761252642BE7200E16BA1 /* TestBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBridge.m; sourceTree = "<group>"; };
 		E6C6913F0E1805504A7AE18A /* Pods-appCenter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appCenter.debug.xcconfig"; path = "Target Support Files/Pods-appCenter/Pods-appCenter.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 			children = (
 				B7A761242642BE7200E16BA1 /* TestBridge.h */,
 				B7A761252642BE7200E16BA1 /* TestBridge.m */,
-				B7A761202642BE2000E16BA1 /* Test.m */,
 				B727CBB5263FF38F00C3AEF8 /* Counter.m */,
 				B727CBB6263FF39000C3AEF8 /* Counter.swift */,
 				13B07FAE1A68108700A75B9A /* appCenter */,
@@ -424,7 +421,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7A761212642BE2000E16BA1 /* Test.m in Sources */,
 				B727CBB8263FF39000C3AEF8 /* Counter.swift in Sources */,
 				B7A761262642BE7200E16BA1 /* TestBridge.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
