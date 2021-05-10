@@ -1,5 +1,7 @@
-import RNEncryptedStorage from 'react-native-encrypted-storage';
+import {NativeModules} from 'react-native';
 import {EncryptedStorage} from './encrypted-storage.store';
+
+const {HBRNEncryptedStorage} = NativeModules
 
 // @ts-ignore
 export class EncryptedStorageImpl implements EncryptedStorage {
@@ -23,7 +25,7 @@ export class EncryptedStorageImpl implements EncryptedStorage {
 
   protected async store<T>(data: T, key?: string): Promise<void> {
     try {
-      await RNEncryptedStorage.setItem(
+      await HBRNEncryptedStorage.setItem(
         key ?? this.storageKey,
         JSON.stringify(data),
       );
@@ -36,7 +38,7 @@ export class EncryptedStorageImpl implements EncryptedStorage {
     await this.delay(1);
 
     try {
-      const data = await RNEncryptedStorage.getItem(key ?? this.storageKey);
+      const data = await HBRNEncryptedStorage.getItem(key ?? this.storageKey);
       return data ? JSON.parse(data) : null;
     } catch (error) {
       throw new Error(error);
@@ -45,7 +47,7 @@ export class EncryptedStorageImpl implements EncryptedStorage {
 
   async reset(key?: string): Promise<void> {
     try {
-      await RNEncryptedStorage.removeItem(key ?? this.storageKey);
+      await HBRNEncryptedStorage.removeItem(key ?? this.storageKey);
     } catch (error) {
       throw new Error(error);
     }
